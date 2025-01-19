@@ -1,6 +1,14 @@
+a {
+    text-decoration: none;
+}
+
 nav.menu {
     background-color: #333;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav.menu ul {
@@ -8,18 +16,19 @@ nav.menu ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    width: 100%;
 }
 
 nav.menu ul li {
-    margin: 0 15px;
+    margin: 0 2vw;
 }
 
 nav.menu ul li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 1vh 2vw;
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -27,4 +36,127 @@ nav.menu ul li a {
 nav.menu ul li a:hover {
     background-color: #575757;
     border-radius: 4px;
+}
+
+.img_cv img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.linkedin{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.linkedin:hover{
+    transform: scale(1.1);
+}
+
+.github{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.github:hover{
+    transform: scale(1.1);
+}
+
+.instagram{
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.instagram:hover{
+    transform: scale(1.1);
+}
+
+.home{
+    background-color: #ffffff; /* Cambia este color al que prefieras */
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 columnas */
+    gap: 0px; /* Espacio entre los elementos del grid */
+    justify-content: center; /* Centra el contenido del grid horizontalmente */
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
+    margin: 0 auto; /* Centra la imagen */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.grid-item img:hover {
+    transform: scale(1.2); /* Agranda la imagen un 20% al pasar el cursor */
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+}
+
+.card-img-top {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-text {
+    margin: 0;
+}
+
+.habilidades_grid {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+}
+
+.footer a {
+    margin: 0 10px;
+}
+
+.footer img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
 }
