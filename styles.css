@@ -2,8 +2,16 @@ a {
     text-decoration: none;
 }
 
+.header {
+    background-color: #ffffffd2;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 nav.menu {
-    background-color: #333;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -16,7 +24,7 @@ nav.menu ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
     width: 100%;
 }
 
@@ -26,7 +34,7 @@ nav.menu ul li {
 
 nav.menu ul li a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 1vh 2vw;
     text-decoration: none;
@@ -159,4 +167,20 @@ nav.menu ul li a:hover {
 
 .footer img:hover {
     transform: scale(1.1);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    nav.menu ul {
+        flex-direction: column; /* Cambia la dirección del menú a columna */
+        align-items: center; /* Centra los elementos del menú */
+    }
+
+    nav.menu ul li {
+        margin: 10px 0; /* Ajusta el margen para los elementos del menú */
+    }
+
+    .header {
+        padding: 10px; /* Ajusta el padding para el header en dispositivos móviles */
+    }
 }
