@@ -24,7 +24,7 @@ nav.menu ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+    justify-content: flex-end; 
     width: 100%;
 }
 
@@ -38,14 +38,11 @@ nav.menu ul li a {
     text-align: center;
     padding: 1vh 2vw;
     text-decoration: none;
-    transition: background-color 0.3s;
 }
 
 nav.menu ul li a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+    border-bottom: 2px solid #575757;
 }
-
 .img_cv img {
     max-width: 100%;
     height: auto;
@@ -56,38 +53,16 @@ nav.menu ul li a:hover {
     height: 150px;
 }
 
-.linkedin{
+.contactos-img-home{
     width: 20px;
     height: 20px;
     margin: 0 10px;
     transition: transform 0.3s;
 }
 
-.linkedin:hover{
+.contactos-img-home:hover{
     transform: scale(1.1);
-}
-
-.github{
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.github:hover{
-    transform: scale(1.1);
-}
-
-.instagram{
-    width: 25px;
-    height: 25px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.instagram:hover{
-    transform: scale(1.1);
-}
+} 
 
 .home{
     background-color: #ffffff; /* Cambia este color al que prefieras */
