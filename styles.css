@@ -1,48 +1,104 @@
-a {
-    text-decoration: none;
-}
-
-.header {
-    background-color: #ffffffd2;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+*{
+    padding: 0%;
+    margin: 0%;
     box-sizing: border-box;
-}
-
-nav.menu {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; 
-    width: 100%;
-}
-
-nav.menu ul li {
-    margin: 0 2vw;
-}
-
-nav.menu ul li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 1vh 2vw;
     text-decoration: none;
+    list-style: none;
 }
 
-nav.menu ul li a:hover {
-    border-bottom: 2px solid #575757;
+.logo_img{
+    height: auto;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
 }
+
+nav{
+    background-color: aliceblue;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #000000;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: .5s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+li a.active{
+    background-color: #e32f2f;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #000000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(whidth: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;    
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        text-align: center;
+        transform: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover,li a.active{
+        background: none;
+        color: #00ff33;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+
 .img_cv img {
     max-width: 100%;
     height: auto;
@@ -53,18 +109,18 @@ nav.menu ul li a:hover {
     height: 150px;
 }
 
-.contactos-img-home{
+.contactos-img-home {
     width: 20px;
     height: 20px;
     margin: 0 10px;
     transition: transform 0.3s;
 }
 
-.contactos-img-home:hover{
+.contactos-img-home:hover {
     transform: scale(1.1);
-} 
+}
 
-.home{
+.home {
     background-color: #ffffff; /* Cambia este color al que prefieras */
     padding: 20px;
     text-align: center;
@@ -144,18 +200,4 @@ nav.menu ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    nav.menu ul {
-        flex-direction: column; /* Cambia la dirección del menú a columna */
-        align-items: center; /* Centra los elementos del menú */
-    }
 
-    nav.menu ul li {
-        margin: 10px 0; /* Ajusta el margen para los elementos del menú */
-    }
-
-    .header {
-        padding: 10px; /* Ajusta el padding para el header en dispositivos móviles */
-    }
-}
