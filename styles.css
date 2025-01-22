@@ -11,11 +11,16 @@
     width: 20px;
 }
 
+
+
 nav {
     background-color: aliceblue;
     height: 80px;
     width: 100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
@@ -51,7 +56,14 @@ li a.active {
 }
 
 .checkbtn {
-    display: none;
+    display: none; /* Oculto por defecto */
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    right: 20px; /* Alinea el botón a la derecha */
+    top: 20px; /* Ajusta la posición vertical del botón */    
 }
 
 #check {
@@ -66,14 +78,14 @@ li a.active {
     nav ul {
         position: fixed;
         top: 80px;
-        left: -100%;
+        right: -100%; /* Inicialmente fuera de la pantalla a la derecha */
         width: 100%;
         height: calc(100vh - 80px);
         background: #2c3e50;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: right 0.5s ease; /* Transición suave */
     }
 
     nav ul li {
@@ -87,7 +99,7 @@ li a.active {
     }
 
     #check:checked ~ ul {
-        left: 0;
+        right: 0; /* Mueve el menú a la vista cuando el checkbox está marcado */
     }
 
     .logo_img {
@@ -196,5 +208,3 @@ li a.active {
 .footer img:hover {
     transform: scale(1.1);
 }
-
-
