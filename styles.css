@@ -11,19 +11,17 @@
     width: 20px;
 }
 
-
-
 nav {
     background-color: aliceblue;
     height: 80px;
     width: 100%;
     display: flex;
-    position: fixed;
-    top: 0;
-    z-index: 1000; 
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: fixed; /* Hace que el menú se quede fijo */
+    top: 0; /* Fija el menú en la parte superior */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 nav ul {
@@ -63,7 +61,7 @@ li a.active {
     cursor: pointer;
     position: absolute; /* Posiciona el botón de forma absoluta */
     right: 20px; /* Alinea el botón a la derecha */
-    top: 20px; /* Ajusta la posición vertical del botón */    
+    top: 20px; /* Ajusta la posición vertical del botón */
 }
 
 #check {
@@ -106,6 +104,11 @@ li a.active {
         width: 30px;
         height: 30px;
     }
+}
+
+/* Añade un margen superior al contenido principal para evitar que quede oculto detrás del menú fijo */
+body {
+    padding-top: 80px; /* Ajusta este valor según la altura del menú */
 }
 
 .img_cv img {
@@ -182,12 +185,60 @@ li a.active {
     margin: 0;
 }
 
+.card-body-formacion {
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container-formacion {
+    display: flex;
+    justify-content: center; /* Centra las cartas horizontalmente */
+    gap: 20px; /* Espacio entre las cartas */
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Reduce el padding */
+    width: 300px; /* Ajusta el ancho de las cartas */
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body img {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1em; /* Reduce el tamaño del título */
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-top: 5px;
+    font-size: 0.9em; /* Reduce el tamaño del texto */
+
+}
+
 .habilidades_grid {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     padding: 20px;
 }
+
 .footer {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
