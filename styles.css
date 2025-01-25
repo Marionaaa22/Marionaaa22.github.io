@@ -118,6 +118,10 @@ nav ul li a:hover {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 /* Home */
 .home {
     padding: 20px;
@@ -358,7 +362,7 @@ nav ul li a:hover {
 }
 
 .card-title {
-    font-size: 1.2em;
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
     margin-bottom: 5px;
 }
 
