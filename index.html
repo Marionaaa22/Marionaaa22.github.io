@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="es"></html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
     <title>Marionaaa22</title>
 </head>
-
-
-
 <body>
-    
     <!--Header-->
     <header>
         <nav>
@@ -20,7 +17,7 @@
             </div>
             <input type="checkbox" id="check">  
             <label for="check" class="checkbtn">
-                <img class= "logo_img"src=".\img\menu_img.png" alt="menu_responsive">
+                <img class="logo_img" src=".\img\menu-icono-blanco.png" alt="menu_responsive">
             </label>
             <ul>
                 <li class="active"><a href="#home">Home</a></li>
@@ -33,18 +30,19 @@
     </header>
 
     <!--Home-->
-    <section class="home" id="home">
+    <section class="home fade-in" id="home">
         <div class="img_cv" id="img_cv">
             <img src=".\img\img_perfil.jpg" alt="foto_CV">
         </div>
         <div class="info_home">
-            <h2>Hola! Soy</h2>
+            <h2>¡Hola! Soy</h2>
             <h1>Mariona Claros Páez</h1>
             <h3>Desarrolladora de Aplicaciones Multiplataforma</h3>
             <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).
                 Consolidando mi camino en el ámbito del desarrollo tecnológico.
             </p>
         </div>
+        <br>
         <div class="contactos_home">
             <a href="https://www.linkedin.com/in/mariona-claros-a0552a2b1/">
                 <img class="contactos-img-home" src=".\img\linkedin_contactos.png" alt="LinkedIn">
@@ -59,78 +57,70 @@
     </section>
 
     <!--Sobre mi-->
-    <section class="sobreMi" id="sobreMi">
-        <div>
-            <h2>Sobre mí</h2>        
-        </div>
-        <div>
-            <h2>Mariona Claros Páez</h2>
-        </div>
-        <p>Soy estudiante de ultimo año de Desarrollo de Aplicaciones Multiplataforma. Compaginando los estudios con mi 
-            trabajo como dependienta en una tienda del centro comercial de Mataró, Normal Mataró. Me considero una persona responsable, organizada y 
-            con capacidad para trabajar en equipo. Me apasiona el mundo de la tecnología y la programación, por lo que me esfuerzo 
-            cada día para mejorar mis habilidades y conocimientos en este ámbito.</p>
-        </p>
-        <div>
-            <p>Puedes descargar mi currículum haciendo clic en el botón de abajo:</p>
-            <a href=".\resources\CV_Mariona_Claros_Paez_Castellano.pdf" class="download-btn" download="CV_Mariona_Claros_Paez.pdf">Descargar Currículum</a>
-        </div>
+    <section class="sobreMi fade-in" id="sobreMi">
+        <div class="sobreMi-container">
+            <h2>Sobre mí</h2>
+            <p>Soy estudiante de último año de Desarrollo de Aplicaciones Multiplataforma. Compaginando los estudios con mi 
+                trabajo como dependienta en una tienda del centro comercial de Mataró, Normal Mataró. Me considero una persona responsable, organizada y 
+                con capacidad para trabajar en equipo. Me apasiona el mundo de la tecnología y la programación, por lo que me esfuerzo 
+                cada día para mejorar mis habilidades y conocimientos en este ámbito.</p>
+            <div class="cv-download">
+                <p>Puedes descargar mi currículum haciendo clic en el botón de abajo:</p>
+                <a href=".\resources\CV_Mariona_Claros_Paez_Castellano.pdf" class="download-btn" download="CV_Mariona_Claros_Paez.pdf">Descargar Currículum</a>
+            </div>
         </div>
     </section>
 
     <!--Habilidades-->
-    <section class="habilidades" id="habilidades">
-        <div>
+    <section class="habilidades fade-in" id="habilidades"> 
+        <div class="habilidades-header">
             <h2>Habilidades</h2>
+            <p>Estas son algunas de las habilidades que he adquirido a lo largo de mi formación y experiencia.</p>
         </div>  
-        <div class="habilidades_grid">
-            <div class="grid-container">
-                <div class="grid-item">
-                    <img src=".\img\html5_habilidades.png" alt="HTML5">
-                    <p>HTML 5</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\css_habilidades.png" alt="CSS">
-                    <p>CSS</p>
-                </div>
-                <div class="grid-item">
-                    <img src= ".\img\js_habilidades.png"alt="GitHub">
-                    <p>JavaScript</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\java_habilidades.png" alt="Java">
-                    <p>Java</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\github_contactos.png" alt="JavaScript">
-                    <p>GitHub</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\sql_habilidades.png" alt="SQL">
-                    <p>Consultas SQL</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\php_habilidades.png" alt="PHP">
-                    <p>PHP</p>
-                </div>
-                <div class="grid-item">
-                    <img src=".\img\laravel_habilidades.png" alt="Laravel">
-                    <p>Laravel</p>
-                </div>
-            </div>        
+        <div class="habilidades_grid">            
+            <div class="grid-item">
+                <img src=".\img\html5_habilidades.png" alt="HTML5">
+                <p>HTML 5</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\css_habilidades.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\js_habilidades.png" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\java_habilidades.png" alt="Java">
+                <p>Java</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\github_contactos.png" alt="GitHub">
+                <p>GitHub</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\sql_habilidades.png" alt="SQL">
+                <p>Consultas SQL</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\php_habilidades.png" alt="PHP">
+                <p>PHP</p>
+            </div>
+            <div class="grid-item">
+                <img src=".\img\laravel_habilidades.png" alt="Laravel">
+                <p>Laravel</p>
+            </div>
         </div>
-            
     </section>
 
     <!--Formación-->
-    <section class="formacion" id="formacion">
+    <section class="formacion fade-in" id="formacion">
         <div>
             <h2>Formación</h2>
-
             <div class="card-container-formacion">
                 <div class="card">
                     <div class="card-body">
-                        <img src=".\img\logo-salesians.jpg" alt="salesians_logo">
+                        <img src=".\img\salesianos-icono.png" alt="salesians_logo">
                         <h2 class="card-title">Salesians Mataró</h2>
                         <h4>Bachillerato tecnológico</h4>
                         <p class="card-text">2021-2023</p>
@@ -146,7 +136,6 @@
                 </div>
             </div>
         </div>
-            
     </section>
 
     <!--Proyectos-->

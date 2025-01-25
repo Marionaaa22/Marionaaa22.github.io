@@ -14,6 +14,11 @@ body {
     padding-top: 80px; /* Ajusta según la altura del header */
 }
 
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
 .logo_img {
     height: 20px;
     width: 20px;
@@ -21,7 +26,7 @@ body {
 
 /* Header */
 nav {
-    background-color: #2c3e50;
+    background-color: #6E7A93;
     height: 80px;
     width: 100%;
     display: flex;
@@ -46,20 +51,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     padding: 7px 13px;
     border-radius: 3px;
+    font-weight: bold;
     text-transform: uppercase;
-    transition: background-color 0.3s;
+    transition:border-bottom 0.3s; /* Añade transición para background-color y border-bottom */
+    border-bottom: 2px solid transparent; /* Inicialmente transparente */
 }
 
 nav ul li a:hover {
-    background-color: #000;
-}
-
-li a.active {
-    background-color: #e32f2f;
-    transition: 0.5s;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff; /* Aparece una línea blanca debajo al pasar el ratón */
 }
 
 .checkbtn {
@@ -73,6 +76,10 @@ li a.active {
     top: 20px; /* Ajusta la posición vertical del botón */
 }
 
+.checkbtn img {
+    width: 30px;
+    height: 30px;
+}
 #check {
     display: none;
 }
@@ -88,7 +95,7 @@ li a.active {
         right: -100%; /* Inicialmente fuera de la pantalla a la derecha */
         width: 100%;
         height: calc(100vh - 80px);
-        background: #2c3e50;
+        background: #6E7A93;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -102,38 +109,28 @@ li a.active {
 
     nav ul li a {
         font-size: 18px;
+        font-weight: bold;
         color: #fff;
     }
 
     #check:checked ~ ul {
         right: 0; /* Mueve el menú a la vista cuando el checkbox está marcado */
     }
-
-    .logo_img {
-        width: 30px;
-        height: 30px;
-    }
 }
 
-.section-header {
+/* Home */
+.home {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #2c3e50;
 }
 
 .img_cv img {
-    max-width: 100%;
-    height: auto;
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
     display: block;
     margin: 0 auto;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
 }
 
 .contactos-img-home {
@@ -147,38 +144,142 @@ section h2 {
     transform: scale(1.1);
 }
 
-.home {
-    background-color: #ffffff; /* Cambia este color al que prefieras */
-    padding: 20px;
+/* Sobre mí */
+.sobreMi {
+    padding: 40px 20px;
     text-align: center;
 }
 
-/* Grid items */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espacio entre los elementos del grid */
-    justify-content: center; /* Centra los elementos horizontalmente */
+.sobreMi-container {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobreMi h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.sobreMi h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.sobreMi p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cv-download {
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #6E7A93; /* Color del texto azul */
+    padding: 12px 25px;
+    border: 2px solid #6E7A93; /* Contorno azul */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el color de fondo y el color del texto */
+}
+
+.download-btn:hover {
+    background-color: #6E7A93; /* Fondo azul al pasar el ratón */
+    color: #fff; /* Color del texto blanco al pasar el ratón */
+}
+
+.habilidades {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+.habilidades-header {
+    margin-bottom: 20px;
+}
+
+.habilidades h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center; /* Asegura que el h2 esté centrado */
+}
+
+.habilidades p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.habilidades_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(2, auto); /* 2 filas */
+    gap: 20px; /* Elimina el espacio entre los elementos del grid */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 20px;
+    margin: 0 auto; /* Centra el grid en la sección */
+    max-width: 800px; /* Ajusta el ancho máximo del grid */
 }
 
 .grid-item {
     background-color: #fff;
     padding: 20px;
+    border: 2px solid #6E7A93; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%; /* Ajusta el ancho de los elementos del grid */
 }
 
 .grid-item img {
-    width: 40px; /* Ajusta el tamaño de la imagen */
-    height: 40px; /* Ajusta el tamaño de la imagen */
+    width: 60px; /* Ajusta el tamaño de la imagen */
+    height: 60px; /* Ajusta el tamaño de la imagen */
     object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
 }
 
 .grid-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .habilidades_grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas pequeñas */
+        grid-template-rows: repeat(4, auto); /* 4 filas */
+    }
+}
+
+@media (max-width: 480px) {
+    .habilidades_grid {
+        grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
+        grid-template-rows: repeat(8, auto); /* 8 filas */
+    }
 }
 
 .card-img-top {
@@ -202,6 +303,27 @@ section h2 {
 }
 
 /* Formación */
+
+.formacion {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.formacion h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.formacion p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 .card-container-formacion {
     display: flex;
     justify-content: center; /* Centra las cartas horizontalmente */
@@ -212,91 +334,11 @@ section h2 {
 .card {
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Reduce el padding */
-    width: 200px; /* Ajusta el ancho de las cartas */
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
-}
-
-.card:hover {
-    transform: scale(1.05); /* Agranda ligeramente la carta al pasar el cursor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
-}
-
-.card-body {
-    text-align: center;
-}
-
-.card-body img {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    margin-bottom: 10px;
-    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
-    border-radius: 5px; /* Añade bordes redondeados a las imágenes */
-}
-
-.card-title {
-    font-size: 1.2em; /* Reduce el tamaño del título */
-    margin-bottom: 5px;
-}
-
-.card-text {
-    font-size: 0.9em; /* Reduce el tamaño del texto */
-}
-
-.habilidades_grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-items: center;
-    padding: 20px;
-}
-
-.grid-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    width: 150px; /* Ajusta el ancho de los elementos del grid */
-}
-
-.grid-item img {
-    width: 40px; /* Ajusta el tamaño de la imagen */
-    height: 40px; /* Ajusta el tamaño de la imagen */
-    object-fit: cover;
-}
-
-.grid-item:hover {
-    transform: scale(1.1);
-}
-
-/* Botones */
-.download-btn {
-    display: inline-block;
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.download-btn:hover {
-    background-color: #0056b3;
-}
-
-.card {
-    background-color: #fff;
-    border: 1px solid #ccc;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    border: 2px solid #6E7A93; 
 }
 
 .card:hover {
@@ -311,19 +353,47 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.card-body {
+    text-align: center;
+}
+
 .card-title {
     font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 5px;
 }
 
 .card-text {
     font-size: 0.9em;
-    color: #666;
+}
+
+/* Animación de aparición */
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Aumenta la duración de la transición a 2 segundos */
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Animación de desaparición */
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Aumenta la duración de la transición a 2 segundos */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Footer */
 .footer {
+    background-color: #D5D5D5;
     display: flex;
     justify-content: center;
     align-items: center;
