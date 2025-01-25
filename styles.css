@@ -1,3 +1,4 @@
+/* Reset global */
 * {
     padding: 0;
     margin: 0;
@@ -6,24 +7,33 @@
     list-style: none;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px; /* Ajusta según la altura del header */
+}
+
 .logo_img {
     height: 20px;
     width: 20px;
 }
 
+/* Header */
 nav {
-    background-color: aliceblue;
+    background-color: #2c3e50;
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: fixed; /* Hace que el menú se quede fijo */
-    top: 0; /* Fija el menú en la parte superior */
-    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Menú de navegación */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -36,16 +46,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000;
+    color: #fff;
     padding: 7px 13px;
     border-radius: 3px;
-    transition: 0.5s;
     text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #000;
-    color: #fff;
 }
 
 li a.active {
@@ -106,9 +115,15 @@ li a.active {
     }
 }
 
-/* Añade un margen superior al contenido principal para evitar que quede oculto detrás del menú fijo */
-body {
-    padding-top: 80px; /* Ajusta este valor según la altura del menú */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 .img_cv img {
@@ -138,36 +153,32 @@ body {
     text-align: center;
 }
 
+/* Grid items */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 columnas */
-    gap: 0px; /* Espacio entre los elementos del grid */
-    justify-content: center; /* Centra el contenido del grid horizontalmente */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre los elementos del grid */
+    justify-content: center; /* Centra los elementos horizontalmente */
     padding: 20px;
 }
 
 .grid-item {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .grid-item img {
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: 50px; /* Ajusta el tamaño de la imagen */
-    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
-    margin: 0 auto; /* Centra la imagen */
-    transition: transform 0.3s; /* Añade una transición suave */
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: 40px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover;
 }
 
-.grid-item img:hover {
-    transform: scale(1.2); /* Agranda la imagen un 20% al pasar el cursor */
-}
-
-.grid-item p {
-    margin-top: 10px;
-    font-size: 14px; /* Ajusta el tamaño del texto */
+.grid-item:hover {
+    transform: scale(1.1);
 }
 
 .card-img-top {
@@ -190,6 +201,7 @@ body {
     align-items: center;
 }
 
+/* Formación */
 .card-container-formacion {
     display: flex;
     justify-content: center; /* Centra las cartas horizontalmente */
@@ -203,12 +215,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px; /* Reduce el padding */
-    width: 300px; /* Ajusta el ancho de las cartas */
+    width: 200px; /* Ajusta el ancho de las cartas */
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Agranda ligeramente la carta al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
 }
 
 .card-body {
@@ -219,46 +233,100 @@ body {
     width: 100px; /* Ajusta el tamaño de la imagen */
     height: auto;
     margin-bottom: 10px;
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el contenedor */
+    border-radius: 5px; /* Añade bordes redondeados a las imágenes */
 }
 
 .card-title {
-    font-size: 1em; /* Reduce el tamaño del título */
+    font-size: 1.2em; /* Reduce el tamaño del título */
     margin-bottom: 5px;
 }
 
 .card-text {
-    margin-top: 5px;
     font-size: 0.9em; /* Reduce el tamaño del texto */
-
 }
 
 .habilidades_grid {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
     padding: 20px;
 }
 
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 150px; /* Ajusta el ancho de los elementos del grid */
+}
+
+.grid-item img {
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: 40px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+/* Botones */
 .download-btn {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
     background-color: #007BFF;
-    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
     border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .download-btn:hover {
     background-color: #0056b3;
 }
 
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Footer */
 .footer {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
