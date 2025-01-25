@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, {
         threshold: 0.1 // La cantidad de visibilidad que debe tener el elemento para activar la animación
     });
-
+ 
     elements.forEach(element => {
         observer.observe(element);
     });
