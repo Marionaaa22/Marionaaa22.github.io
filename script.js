@@ -18,4 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     elements.forEach(element => {
         observer.observe(element);
     });
+
+    
+    const menu = document.querySelector('nav ul');
+    const menuItems = document.querySelectorAll('nav ul li');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menu.classList.add('hidden');
+        });
+    });
 });
