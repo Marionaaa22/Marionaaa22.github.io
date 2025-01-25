@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                entry.target.classList.remove('fade-out');
+                entry.target.classList.remove('fade-out'); 
             } else {
                 entry.target.classList.remove('visible');
                 entry.target.classList.add('fade-out');
