@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                entry.target.classList.remove('fade-out'); 
+                entry.target.classList.remove('fade-out');
             } else {
                 entry.target.classList.remove('visible');
                 entry.target.classList.add('fade-out');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, {
         threshold: 0.1 // La cantidad de visibilidad que debe tener el elemento para activar la animación
     });
- 
+
     elements.forEach(element => {
         observer.observe(element);
     });
