@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>Marionaaa22</title>
 </head>
@@ -24,7 +25,7 @@
                 <li><a href="#sobreMi">Sobre mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#formacion">Formación</a></li>
-                <!-- <li><a href="#proyectos">Proyectos</a></li> -->
+                <li><a href="#proyectos">Proyectos</a></li>
             </ul> 
         </nav>
     </header>
@@ -112,6 +113,51 @@
             </div>
         </div>
     </section>
+    <!--Proyectos-->
+    <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/proyecto1.jpg" class="d-block w-100" alt="Proyecto 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>CRAPPIA</h5>
+                    <p>Proyecto de prácticas</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="./img/pro2.jpg" class="d-block w-100" alt="Proyecto 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="./img/pro3.jpg" class="d-block w-100" alt="Proyecto 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 
     <!--Formación-->
     <section class="formacion fade-in" id="formacion">
@@ -142,7 +188,9 @@
     <!-- <section class="proyectos" id="proyectos">
         
     </section>     -->
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    </script>
 </body>
 <footer>
     <div class="footer">    

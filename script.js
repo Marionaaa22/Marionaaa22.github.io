@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Animaciones de intersección
     const elements = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    
+    // Ocultar menú al hacer clic en un elemento
     const menu = document.querySelector('nav ul');
     const menuItems = document.querySelectorAll('nav ul li');
 
@@ -27,5 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             menu.classList.add('hidden');
         });
+    });
+
+    // Funcionalidad del carrusel
+    const carousel = new bootstrap.Carousel('#carouselExampleCaptions', {
+        interval: 3000, // Cambia cada 3 segundos
+        ride: 'carousel'
     });
 });
