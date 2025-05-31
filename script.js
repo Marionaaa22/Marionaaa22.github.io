@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animaciones de intersección
     const elements = document.querySelectorAll('.fade-in');
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -13,26 +13,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.1 // La cantidad de visibilidad que debe tener el elemento para activar la animación
+        threshold: 0.1
     });
 
     elements.forEach(element => {
         observer.observe(element);
     });
 
-    // Ocultar menú al hacer clic en un elemento
+    // Ocultar menú al hacer clic en un elemento (solo si está visible)
     const menu = document.querySelector('nav ul');
     const menuItems = document.querySelectorAll('nav ul li');
 
     menuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            menu.classList.add('hidden');
+        item.addEventListener('click', () => {
+            if (menu.classList.contains('show')) {  // ajusta esta clase según tu CSS para menú visible
+                menu.classList.remove('show');
+            }
         });
     });
-
-    // Funcionalidad del carrusel
-    const carousel = new bootstrap.Carousel('#carouselExampleCaptions', {
-        interval: 3000, // Cambia cada 3 segundos
-        ride: 'carousel'
-    });
+    
 });
