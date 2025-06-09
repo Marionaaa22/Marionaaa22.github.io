@@ -56,7 +56,7 @@ nav ul li a {
     border-radius: 3px;
     font-weight: bold;
     text-transform: uppercase;
-    transition:border-bottom 0.3s; /* Añade transición para background-color y border-bottom */
+    transition:border-bottom 0.3s;
     border-bottom: 2px solid transparent; /* Inicialmente transparente */
 }
 
