@@ -1,0 +1,105 @@
+/* Header / Navbar */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222; /* ajusta color */
+  color: #fff;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px; /* ajustar altura del header */
+  padding: 0 1rem;
+}
+
+/* Logo */
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  padding-top: 6px; /* baja el logo visualmente */
+}
+
+/* Links desktop */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none; /* sin línea */
+  padding: 8px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color .18s, border-bottom-color .18s;
+}
+
+.nav-links a:hover {
+  color: #ffd;
+  border-bottom-color: rgba(255,255,255,0.15);
+}
+
+/* Botón menú (móvil) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Evitar que el header tape el contenido */
+body {
+  padding-top: 72px; /* igual que .navbar height */
+  margin: 0;
+}
+
+/* Móvil: menú lateral que comienza debajo del header */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    position: fixed;
+    top: 72px; /* justo debajo del header */
+    right: 0;
+    width: 230px;
+    height: calc(100vh - 72px);
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform .25s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+  }
+}
