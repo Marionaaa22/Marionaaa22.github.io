@@ -9,6 +9,7 @@ import Proyectos from "./components/Proyectos";
 import Habilidades from "./components/Habilidades";
 import Formacion from "./components/Formacion";
 import Footer from "./components/Footer";
+import "./styles/styles.css";
 
 export default function App() {
   return (
