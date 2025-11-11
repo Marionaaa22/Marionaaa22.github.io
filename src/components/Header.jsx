@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import logoMenu from "../assets/menu-icono-blanco.png"; // ruta correcta a tu imagen
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
