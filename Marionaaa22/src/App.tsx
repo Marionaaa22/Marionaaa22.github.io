@@ -1,9 +1,12 @@
-import React from "react";
+import Headers from './components/Header'
+import './App.css'
 
-export default function App() {
+function App() {
   return (
     <>
-
+      <Headers />
     </>
-  );
+  )
 }
+
+export default App
