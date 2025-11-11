@@ -1,31 +1,23 @@
 import React, { useState } from "react";
-import logoMenu from "../assets/menu-icono-blanco.png"; 
+import logoMenu from "../assets/menu-icono-blanco.png";
+import "../styles/header.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header>
-      <nav>
+      <nav className="navbar">
         <div className="logo">
           <h1>Mi Portfolio</h1>
         </div>
 
-        {/* Checkbox para menú responsivo */}
-        <input
-          type="checkbox"
-          id="check"
-          checked={menuOpen}
-          onChange={() => setMenuOpen(!menuOpen)}
-        />
+        {/* Botón menú para móvil */}
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <img src={logoMenu} alt="menu" />
+        </div>
 
-        {/* Botón del menú */}
-        <label htmlFor="check" className="checkbtn">
-          <img className="logo_img" src={logoMenu} alt="menu_responsive" />
-        </label>
-
-        {/* Lista de enlaces */}
-        <ul className={menuOpen ? "open" : ""}>
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><a href="#home">Home</a></li>
           <li><a href="#sobreMi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
