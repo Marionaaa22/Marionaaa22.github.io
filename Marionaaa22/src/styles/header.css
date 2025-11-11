@@ -3,32 +3,33 @@ header {
   width: 100%;
   background-color: #333;
   color: white;
-  position: fixed; /* Fija el header arriba */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Para que esté encima del resto del contenido */
+  z-index: 1000;
   box-sizing: border-box;
 }
 
-body {
-  padding-top: 80px; /* Antes era 60px, subimos para separar del header */
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* Navbar flex */
+/* Ajusto la altura del navbar para que el logo quede más centrado / abajo */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 80px; /* aumentado desde 60px */
   padding: 0 2rem;
 }
 
-/* Logo */
+/* Logo: forzar centrado vertical */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .logo h1 {
-  margin: 0;
+  margin: 0;          /* quitar margin-top conflictivo */
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 /* Menú de enlaces */
@@ -67,8 +68,8 @@ body {
   }
 
   .nav-links {
-    position: fixed; /* Cambiado a fixed para que se superponga */
-    top: 60px; /* Justo debajo del header */
+    position: fixed;
+    top: 40px;               /* cubrir desde la parte superior */
     right: 0;
     background-color: #333;
     flex-direction: column;
@@ -76,7 +77,9 @@ body {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     padding: 1rem;
-    height: calc(100% - 60px); /* Ocupa toda la altura menos el header */
+    height: 100vh;              /* ocupar toda la altura de la pantalla */
+    padding-top: 80px;         /* dejar espacio para que el contenido del menú no quede debajo del header */
+    z-index: 1100;             /* por encima del header para que no salga el blanco */
   }
 
   .nav-links.active {
@@ -89,6 +92,9 @@ body {
 }
 
 /* Para que el contenido de la página no quede tapado por el header */
+/* Mantener un único body { padding-top } acorde a la altura del header */
 body {
-  padding-top: 60px;
+  padding-top: 80px;
+  margin: 0;
+  font-family: sans-serif;
 }

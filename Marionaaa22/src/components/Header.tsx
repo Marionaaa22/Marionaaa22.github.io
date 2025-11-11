@@ -7,11 +7,12 @@ export default function Header() {
 
   return (
     <header>
+      
       <nav className="navbar">
-        <div className="logo">
+        
+          <div className="logo">
           <h1>Mi Portfolio</h1>
         </div>
-
         {/* Botón menú para móvil */}
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           <img src={logoMenu} alt="menu" />
@@ -24,6 +25,7 @@ export default function Header() {
           <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#formacion">Formación</a></li>
         </ul>
+        
       </nav>
     </header>
   );
