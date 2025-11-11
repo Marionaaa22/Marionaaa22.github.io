@@ -15,8 +15,8 @@ export default function App() {
   return (
     <>
       <Header />
-      
       <Home />
+        
       <SobreMi />
       <Proyectos />
       <Habilidades />
